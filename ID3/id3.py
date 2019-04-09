@@ -2,6 +2,7 @@
 from math import log
 import operator
 import treePlotter
+import pdb
 
 def calcShannonEnt(dataSet):
     """
@@ -88,6 +89,7 @@ def createTree(dataSet, labels):
     if len(dataSet[0]) == 1:
         # 遍历完所有特征时返回出现次数最多的
         return majorityCnt(classList)
+
     bestFeat = chooseBestFeatureToSplit(dataSet)
     bestFeatLabel = labels[bestFeat]
     myTree = {bestFeatLabel:{}}
